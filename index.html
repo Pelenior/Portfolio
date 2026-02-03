@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#263238">
+    <title>Pelayo Santos - Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1 class="title">PELAYO SANTOS</h1>
+        <p class="subtitle">Accede a mi información</p>
+
+        <div class="qr-container">
+            <!-- Código QR generado dinámicamente apuntando al PDF -->
+            <img id="qr-code"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Portafolio%20Personal.pdf&bgcolor=ffffff&color=000000"
+                alt="Código QR">
+        </div>
+
+        <h2 class="contact-header">Contáctame</h2>
+
+        <div class="contact-info">
+            <p><strong>Email:</strong> pelayosm3@gmail.com</p>
+            <p><strong>Teléfono:</strong> +34 684 20 09 94</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/pelayosm</p>
+            <p><strong>Ubicación Principal:</strong> Madrid</p>
+        </div>
+    </div>
+
+    <script>
+        // Este script se ejecuta al cargar la página para generar el QR con la URL real
+        window.onload = function () {
+            // Usamos %20 para los espacios en el nombre del archivo
+            var pdfFile = "Portafolio%20Personal.pdf";
+            // Obtiene la ruta base actual (ej: https://tu-web.vercel.app/) quitando "index.html" si está presente
+            var baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+            var fullPdfUrl = baseUrl + pdfFile;
+
+            var qrImg = document.getElementById("qr-code");
+            // Actualiza la fuente de la imagen con la nueva URL codificada
+            qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(fullPdfUrl) + "&bgcolor=ffffff&color=000000";
+        };
+    </script>
+</body>
+
+</html>

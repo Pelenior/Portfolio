@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #263238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: #37474f;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+}
+
+.title {
+    margin-top: 0;
+    color: #80deea;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    color: #b2ebf2;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.qr-container img {
+    margin-bottom: 1.5rem;
+}
+
+.contact-header {
+    color: #80deea;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #546e7a;
+    padding-bottom: 10px;
+}
+
+.contact-info {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: #263238;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #546e7a;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    color: #ffffff;
+}
+
+.contact-info p strong {
+    color: #80deea;
+}
+
+.contact-info a {
+    color: #80deea;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos optimizados para móviles */
+@media (max-width: 600px) {
+    body {
+        background-color: #263238;
+        align-items: flex-start;
+    }
+
+    .card {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-info p {
+        font-size: 1.1rem;
+        margin: 15px 0;
+    }
+
+    .contact-info a {
+        display: block;
+        padding: 8px 0;
+    }
+}
